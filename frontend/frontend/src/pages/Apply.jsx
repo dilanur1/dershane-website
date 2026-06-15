@@ -4,6 +4,7 @@ import api from "../api";
 function Apply() {
   const [form, setForm] = useState({
     name: "",
+    surname: "",
     phone: "",
     class: ""
   });
@@ -19,7 +20,7 @@ function Apply() {
       const res = await api.post("/apply", form);
       alert(res.data.message);
 
-      setForm({ name: "", phone: "", class: "" });
+      setForm({ name: "", surname: "", phone: "", class: "" });
     } catch (err) {
       alert("Hata oluştu");
     }
@@ -33,8 +34,15 @@ function Apply() {
 
         <input
           name="name"
-          placeholder="Ad Soyad"
+          placeholder="Ad"
           value={form.name}
+          onChange={handleChange}
+        />
+
+        <input
+          name="surname"
+          placeholder="Soyad"
+          value={form.surname}
           onChange={handleChange}
         />
 
