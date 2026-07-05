@@ -8,6 +8,9 @@ import Programs from "./pages/Programs";
 import Success from "./pages/Success";
 import Contact from "./pages/Contact";
 import Apply from "./pages/Apply";
+import AdminLogin from "./pages/AdminLogin";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -23,6 +26,15 @@ function App() {
         <Route path="/basarilar" element={<Success />} />
         <Route path="/iletisim" element={<Contact />} />
         <Route path="/basvuru" element={<Apply />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route 
+          path="/dashboard" 
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } 
+        />
       </Routes>
 
     </BrowserRouter>
