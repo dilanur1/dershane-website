@@ -11,6 +11,7 @@ import Apply from "./pages/Apply";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
+import StudentsList from "./pages/StudentsList";
 
 function App() {
   return (
@@ -32,6 +33,14 @@ function App() {
           element={
             <ProtectedRoute>
               <AdminDashboard />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/dashboard/students" 
+          element={
+            <ProtectedRoute>
+              <StudentsList />
             </ProtectedRoute>
           } 
         />

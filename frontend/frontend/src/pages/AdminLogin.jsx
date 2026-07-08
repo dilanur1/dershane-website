@@ -9,10 +9,11 @@ export default function AdminLogin() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loginProcessing, setLoginProcessing] = useState(false);
 
 const login = async (e) => {
     e.preventDefault();
-
+    setLoginProcessing(true); 
     try {
         const res = await api.post(
             "/admin/login",
@@ -28,6 +29,8 @@ const login = async (e) => {
 
     } catch (err) {
         alert(err.response?.data?.message || "Giriş başarısız");
+    } finally {
+        setLoginProcessing(false); 
     }
 };
 
@@ -53,10 +56,17 @@ const login = async (e) => {
                     value={password}
                     onChange={(e)=>setPassword(e.target.value)}
                 />
-
-                <button type="submit">
-                    Giriş Yap
-                </button>
+                {loginProcessing ? (
+                    <button type="submit" disabled>
+                        <span className="spinner"></span>
+                        Giriş yapılıyor...
+                    </button>
+                ) : (
+                    <button type="submit">
+                        Giriş Yap
+                    </button>
+                )} 
+                
 
             </form>
 

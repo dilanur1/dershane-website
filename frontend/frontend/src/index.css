@@ -376,7 +376,7 @@
 /* MODAL KUTU */
 .modal {
   background: white;
-  padding: 30px 20px;
+  padding: 20px 20px;
   border-radius: 12px;
   width: 320px;
   display: flex;
@@ -677,4 +677,1050 @@ body {
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+ 
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+ 
+.dashboard-header h2 {
+  margin: 0;
+  color: #1f2937;
+}
+ 
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+ 
+/* ---------- Butonlar ---------- */
+ 
+.logout-btn,
+.secondary-btn,
+.convert-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+ 
+.logout-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+ 
+.secondary-btn {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+.secondary-btn:hover {
+  background-color: #d1d5db;
+}
+ 
+.convert-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+.convert-btn:hover {
+  background-color: #1d4ed8;
+}
+.convert-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+ 
+.delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.delete-btn:hover {
+  background-color: #fecaca;
+}
+ 
+button:active {
+  transform: scale(0.97);
+}
+ 
+/* ---------- Tablo ---------- */
+ 
+.table-responsive {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+ 
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+ 
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+ 
+.dashboard-table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+ 
+.dashboard-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+ 
+.class-badge {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #4338ca;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+ 
+.no-data {
+  text-align: center;
+  color: #9ca3af;
+  padding: 24px !important;
+}
+ 
+/* ---------- Durum mesajları ---------- */
+ 
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+ 
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+ 
+/* ---------- Modal ---------- */
+ 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+ 
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+ 
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1f2937;
+  font-size: 18px;
+}
+ 
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+ 
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+}
+ 
+.modal-content input {
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+ 
+.modal-content input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+ 
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+ 
+.modal-actions button[type="button"] {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+ 
+.modal-actions button[type="button"]:hover {
+  background-color: #e5e7eb;
+}
+ 
+/* ---------- Mobil ---------- */
+ 
+@media (max-width: 640px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================
+   Admin Dashboard & Students List - ortak stiller
+   Mevcut dashboard.css / App.css dosyana ekleyebilir
+   ya da ayrı bir dosya olarak import edebilirsin:
+   import "./dashboard.css";
+   ========================================================== */
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- Butonlar ---------- */
+
+.logout-btn,
+.secondary-btn,
+.convert-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+.secondary-btn {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+.secondary-btn:hover {
+  background-color: #d1d5db;
+}
+
+.convert-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+.convert-btn:hover {
+  background-color: #1d4ed8;
+}
+.convert-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.delete-btn:hover {
+  background-color: #fecaca;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Tablo ---------- */
+
+.table-responsive {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.dashboard-table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.class-badge {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #4338ca;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: #9ca3af;
+  padding: 24px !important;
+}
+
+/* ---------- Durum mesajları ---------- */
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* ---------- Modal ---------- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.modal-content input {
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #e5e7eb;
+}
+
+/* ---------- Başvuru Formu (Apply) ---------- */
+
+.apply-container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.apply-container h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #1f2937;
+  font-size: 22px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form input,
+.form select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1f2937;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Placeholder gibi görünen "Sınıf Seçiniz" seçeneği */
+.form select:invalid,
+.form select option[value=""] {
+  color: #9ca3af;
+}
+
+.form select option {
+  color: #1f2937;
+}
+
+.form button[type="submit"] {
+  margin-top: 6px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.form button[type="submit"]:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.form button[type="submit"]:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 12px;
+  margin-top: -8px;
+}
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+/* ==========================================================
+   Admin Dashboard & Students List - ortak stiller
+   Mevcut dashboard.css / App.css dosyana ekleyebilir
+   ya da ayrı bir dosya olarak import edebilirsin:
+   import "./dashboard.css";
+   ========================================================== */
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- Butonlar ---------- */
+
+.logout-btn,
+.secondary-btn,
+.convert-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+.secondary-btn {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+.secondary-btn:hover {
+  background-color: #d1d5db;
+}
+
+.convert-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+.convert-btn:hover {
+  background-color: #1d4ed8;
+}
+.convert-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.delete-btn:hover {
+  background-color: #fecaca;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Tablo ---------- */
+
+.table-responsive {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.dashboard-table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.class-badge {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #4338ca;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: #9ca3af;
+  padding: 24px !important;
+}
+
+/* ---------- Durum mesajları ---------- */
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* ---------- Modal ---------- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.modal-content input {
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #e5e7eb;
+}
+
+/* ---------- Başvuru Formu (Apply) ---------- */
+
+.apply-container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.apply-container h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #1f2937;
+  font-size: 22px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form input,
+.form select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1f2937;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Placeholder gibi görünen "Sınıf Seçiniz" seçeneği */
+.form select:invalid,
+.form select option[value=""] {
+  color: #9ca3af;
+}
+
+.form select option {
+  color: #1f2937;
+}
+
+.form button[type="submit"] {
+  margin-top: 6px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.form button[type="submit"]:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.form button[type="submit"]:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 12px;
+  margin-top: -8px;
+}
+
+/* ---------- Ücretsiz Tanışma Dersi Modal (FreeTrialModal) ---------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 20px;
+  text-align: center;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal input,
+.modal select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1f2937;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal input:focus,
+.modal select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.modal select:invalid,
+.modal select option[value=""] {
+  color: #9ca3af;
+}
+
+.modal select option {
+  color: #1f2937;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.submit-btn,
+.close-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.submit-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.submit-btn:disabled,
+.close-btn:disabled {
+  background-color: #93c5fd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.close-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.close-btn:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
 }
