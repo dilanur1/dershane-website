@@ -5,3 +5,4 @@ python-dotenv
 flask-cors
 PyJWT
 Werkzeug
+flask_jwt_extended
