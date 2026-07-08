@@ -11,7 +11,7 @@ import Apply from "./pages/Apply";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
-import StudentsList from "./pages/StudentsList";
+import StudentsList from "./pages/Studentslist";
 
 function App() {
   return (
